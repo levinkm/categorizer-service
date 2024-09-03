@@ -1,0 +1,55 @@
+model:
+  path: "transaction_categorization_model.joblib"
+  training_data_path: "training_data.joblib"
+  training_data_size: 0.8
+  test_size: 0.2
+  random_state: 42
+
+categorization:
+  default_category: "Uncategorized"
+
+performance:
+  max_concurrent_workers: 5
+  batch_size: 30
+  sleep_time: 5
+
+features:
+  categorize_uncategorized_on_startup: False
+  train_model_on_startup: True
+  categorise_with_model: True
+
+# Schedular Configuration
+scheduler:
+  update_interval_hours: 24
+  start_time: "02:00"
+
+# logging Configuration
+logging:
+  level: "INFO" # Logging level (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  date_format: '%Y-%m-%d %H:%M:%S'
+  console_output: true
+  file_output: true
+  file: "logs/app.log" # Log file path
+  max_file_size: 5 # Max log file size before rotation in MB
+  backup_count: 3
+
+# Queue Configuration
+queue:
+  type: "redis"
+  host: ${QUEUE_HOST} # Queue server host
+  port: ${QUEUE_PORT} # Queue server port
+  username: ${QUEUE_USERNAME} # Queue server username
+  password: ${QUEUE_PASSWORD} # Queue server password
+  queue_name: "laravel_database_uncategorized_transactions" # Queue name for processing transactions
+
+
+# Database Configuration
+database:
+  type: "mysql"
+  host: ${DB_HOST} # Database host
+  port: ${DB_PORT} # Database port
+  user: ${DB_USER} # Database user
+  password: ${DB_PASSWORD} # Database password
+  name: ${DB_NAME} # Database name
+

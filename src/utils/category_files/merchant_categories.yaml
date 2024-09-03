@@ -1,0 +1,242 @@
+# International Companies
+AMAZON: shopping
+NETFLIX: entertainment
+STARBUCKS: dining
+WALMART: grocery
+TARGET: shopping
+UBER: transport
+LYFT: transport
+SPOTIFY: entertainment
+COMCAST: utilities
+AT&T: utilities
+CVS: health
+WALGREENS: health
+MICROSOFT: software
+APPLE: electronics
+GOOGLE: software
+FACEBOOK: advertising
+DISNEY: entertainment
+SAMSUNG: electronics
+TESLA: automotive
+FORD: automotive
+TESCO: grocery
+SHELL: fuel
+BP: fuel
+MCDONALDS: dining
+KFC: dining
+BURGER KING: dining
+DOMINOS: dining
+HILTON: travel
+MARRIOTT: travel
+AIRBNB: travel
+EXPEDIA: travel
+DELTA AIRLINES: travel
+BRITISH AIRWAYS: travel
+STARLINK: utilities
+VISA: financial
+MASTERCARD: financial
+PAYPAL: financial
+AMERICAN EXPRESS: financial
+ZOOM: software
+DROPBOX: software
+AIR FRANCE: travel
+QATAR AIRWAYS: travel
+T-MOBILE: utilities
+VODAFONE: utilities
+SKYPE: software
+NIKE: shopping
+ADIDAS: shopping
+H&M: shopping
+ZARA: shopping
+LEGO: shopping
+TOYOTA: automotive
+HONDA: automotive
+MERCEDES: automotive
+BMW: automotive
+AUDI: automotive
+NESTLE: grocery
+COCA-COLA: grocery
+PEPSICO: grocery
+UNILEVER: grocery
+PROCTER & GAMBLE: grocery
+AMAZON WEB SERVICES: software
+ADOBE: software
+ORACLE: software
+IBM: software
+INTEL: electronics
+NVIDIA: electronics
+AMD: electronics
+DELL: electronics
+HP: electronics
+LENOVO: electronics
+ASUS: electronics
+AIRTEL: utilities
+VODACOM: utilities
+MTN: utilities
+ORANGE: utilities
+ETISALAT: utilities
+EMIRATES: travel
+ETIHAD AIRWAYS: travel
+TURKISH AIRLINES: travel
+LUFTHANSA: travel
+AIRFRANCE-KLM: travel
+VIRGIN ATLANTIC: travel
+ACCOR HOTELS: travel
+HYATT: travel
+RADISSON: travel
+INTERCONTINENTAL: travel
+BOOKING.COM: travel
+TRIVAGO: travel
+TRIPADVISOR: travel
+
+# Kenyan Companies
+NAKUMATT: grocery
+JUMIA: shopping
+SAFARICOM: utilities
+MPESA: financial
+EQUITY BANK: financial
+KCB: financial
+NAIROBI JAVA HOUSE: dining
+KAREN HOSPITAL: health
+KENYA AIRWAYS: travel
+TUSKYS: grocery
+KENYA POWER: utilities
+NAIROBI WATER: utilities
+CARREFOUR: grocery
+NAIVAS: grocery
+CO-OPERATIVE BANK: financial
+MUMIAS SUGAR: shopping
+BRITAM: insurance
+NATION MEDIA GROUP: media
+STANDARD GROUP: media
+CHANDARANA: grocery
+UCHUMI: grocery
+TOTAL KENYA: fuel
+RUBIS ENERGY: fuel
+BEST LADY: shopping
+KENYA REINSURANCE: insurance
+CIC INSURANCE: insurance
+KENYA COMMERCIAL BANK: financial
+SIDIAN BANK: financial
+FAMILY BANK: financial
+HOUSING FINANCE GROUP: financial
+GEMS CAMBRIDGE INTERNATIONAL SCHOOL: education
+KENYA METHODIST UNIVERSITY: education
+KESSES BAKERY: grocery
+MUMIAS EASTERN SHOPPING MALL: shopping
+RELIANCE INSURANCE: insurance
+PRUDENTIAL INSURANCE: insurance
+AFYA CENTRE: health
+MTRH ELDORET: health
+OASIS HEALTH: health
+GERTRUDES CHILDRENS HOSPITAL: health
+JACARANDA HOTEL: travel
+SAROVA STANLEY: travel
+KENYA SAFARI LODGE: travel
+MANOR HOTEL: travel
+KENYA FERRY SERVICES: transport
+KENYA RAILWAYS: transport
+BEST DEAL CAR HIRE: transport
+DRIVING FORCE KENYA: transport
+JETLAG TRAVEL: travel
+VIRTUAL CITY: software
+I&M BANK: financial
+NIC BANK: financial
+HOPE FM: media
+CAPITAL FM: media
+RADIO CITIZEN: media
+KENYA BROADCASTING CORPORATION: media
+QUICKMART: grocery
+ARTCAFFE: dining
+CHICKEN INN: dining
+GALITOS: dining
+BATA: shopping
+DEACONS: shopping
+KILIMALL: shopping
+MASOKO: shopping
+JIJI: shopping
+PIGIAME: shopping
+OLX KENYA: shopping
+HOTPOINT APPLIANCES: electronics
+GOLDEN TULIP HOTEL: travel
+SERENA HOTELS: travel
+CROWNE PLAZA: travel
+JAMBOJET: travel
+SAFARILINK: travel
+FLY540: travel
+ABSA BANK: financial
+DTB BANK: financial
+STANBIC BANK: financial
+BARCLAYS BANK OF KENYA: financial
+NATIONAL BANK OF KENYA: financial
+CRDB BANK: financial
+POSTBANK: financial
+AAR INSURANCE: insurance
+JUBILEE INSURANCE: insurance
+ICEA LION: insurance
+APA INSURANCE: insurance
+MADISON INSURANCE: insurance
+RESOLUTION INSURANCE: insurance
+KENYATTA NATIONAL HOSPITAL: health
+NAIROBI HOSPITAL: health
+AGA KHAN UNIVERSITY HOSPITAL: health
+MP SHAH HOSPITAL: health
+COPTIC HOSPITAL: health
+NAIROBI WOMENS HOSPITAL: health
+LANCET KENYA: health
+PATHOLOGISTS LANCET KENYA: health
+MODERN IMAGING & DIAGNOSTIC CENTRE: health
+PLAZA IMAGING SOLUTIONS: health
+UNIVERSITY OF NAIROBI: education
+STRATHMORE UNIVERSITY: education
+KENYATTA UNIVERSITY: education
+MOI UNIVERSITY: education
+JOMO KENYATTA UNIVERSITY: education
+CATHOLIC UNIVERSITY OF EASTERN AFRICA: education
+UNITED STATES INTERNATIONAL UNIVERSITY: education
+DAYSTAR UNIVERSITY: education
+KENYA INSTITUTE OF MANAGEMENT: education
+IMAX KENYA: entertainment
+CENTURY CINEMAX: entertainment
+ANGA IMAX: entertainment
+PLANET MEDIA CINEMAS: entertainment
+SIMBA COLT MOTORS: automotive
+DT DOBIE: automotive
+CMC MOTORS: automotive
+TOYOTA KENYA: automotive
+SUBARU KENYA: automotive
+MARIDADY MOTORS: automotive
+KAMUTHIS MOTORCARS: automotive
+ENGEN KENYA: fuel
+NATIONAL OIL CORPORATION OF KENYA: fuel
+KENOL KOBIL: fuel
+HASS PETROLEUM: fuel
+GAPCO KENYA: fuel
+ZUKU: utilities
+DSTV: utilities
+GOTV: utilities
+STARTIMES: utilities
+LIQUID TELECOM: utilities
+JAMII TELECOM: utilities
+ACCESS KENYA: utilities
+TELKOM KENYA: utilities
+AIRTEL KENYA: utilities
+FAIBA: utilities
+CRAFT SILICON: software
+CELLULANT: software
+USHAHIDI: software
+ANDELA: software
+TWIGA FOODS: grocery
+SENDY: transport
+LITTLE: transport
+GLOVO: transport
+BOLT: transport
+WASILI: transport
+SWVL: transport
+ZURI HEALTH: health
+M-KOPA: utilities
+KOPO KOPO: financial
+BRANCH: financial
+TALA: financial
+MSHWARI: financial
+FULIZA: financial

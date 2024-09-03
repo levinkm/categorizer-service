@@ -1,0 +1,456 @@
+keyword_categories:
+  grocery:
+  - grocery
+  - food
+  - market
+  - butcher
+  - bakery
+  - produce
+  - deli
+  - kiosk
+  - mama mboga
+  - soko
+  - marikiti
+  - nyama choma
+  - kibanda
+  - greengrocer
+  - duka
+  - naivas
+  - tuskys
+  - carrefour
+  - quickmart
+  - choppies
+  - nairobi west mart
+  - clean shelf
+  - city market
+  - uchumi
+  - chandarana
+  - zuchinni
+  - transmart
+  - mountain view
+  - figtree
+
+  transport:
+  - uber
+  - bolt
+  - little cab
+  - taxi
+  - bus
+  - train
+  - matatu
+  - boda boda
+  - tuk tuk
+  - sgr
+  - metro
+  - ride
+  - car rental
+  - fuel
+  - toll
+  - mpesa taxi
+  - kepsa
+  - ntsa
+  - kra
+  - fly540
+  - jambojet
+  - kenya airways
+  - classic coach
+  - coast bus
+  - modern coast
+  - easy coach
+  - north rift
+  - great rift
+  - citizen coach
+  - simba coach
+  - greenline
+  - matwana
+  - lopha
+  - zuri
+  - coach
+  - shuttle
+  - airways
+  - travels
+  - travellers
+  - safaris
+  utilities:
+  - electricity
+  - water
+  - gas
+  - internet
+  - phone
+  - utility
+  - cable
+  - heating
+  - cooling
+  - garbage
+  - sewer
+  - kplc
+  - ncwsc
+  - zuku
+  - safaricom
+  - airtel
+  - airtime
+  - telkom
+  - gotv
+  - dstv
+  - startimes
+  - lpg
+  - jtl
+  - fiber
+  - faiba
+  - metered
+  - kenya power
+  - parking
+  entertainment:
+  - movie
+  - theatre
+  - concert
+  - streaming
+  - game
+  - club
+  - amusement
+  - museum
+  - park
+  - music
+  - show
+  - festival
+  - imax
+  - anga
+  - netflix
+  - showmax
+  - viusasa
+  - baze
+  - safaricom live
+  - kenya national theatre
+  - gikosh
+  - safaricom jazz
+  - koroga festival
+  - blankets & wine
+  - sarit expo
+  - festival
+  - lounge
+  - bar
+  - club
+  - nightclub
+  - pub
+
+  dining:
+  - restaurant
+  - cafe
+  - bar
+  - diner
+  - eatery
+  - bistro
+  - grill
+  - buffet
+  - fast food
+  - pizza
+  - pub
+  - kfc
+  - java
+  - artcaffe
+  - chicken inn
+  - big square
+  - debonairs
+  - burger king
+  - mama oliech
+  - carnivore
+  - chinese restaurant
+  - njuguna's place
+  - mojos
+  - fcb miami
+  - kilimanjaro jamia
+  - village market food court
+  - ranalo foods (kosewe)
+  - gilani's
+  shopping:
+  - mall
+  - store
+  - shop
+  - outlet
+  - retail
+  - boutique
+  - marketplace
+  - superstore
+  - e-commerce
+  - clothing
+  - fashion
+  - jewelry
+  - jumia
+  - kilimall
+  - jiji
+  - masoko
+  - two rivers
+  - the hub
+  - sarit centre
+  - westgate
+  - village market
+  - yaya center
+  - greenspan
+  - nakumatt
+  - best lady
+  - shop
+  - supermarket
+  - stall
+  health:
+  - pharmacy
+  - doctor
+  - hospital
+  - clinic
+  - medical
+  - dentist
+  - optometrist
+  - therapist
+  - medication
+  - wellness
+  - nursing
+  - vaccine
+  - nhif
+  - knh
+  - aga khan
+  - nairobi hospital
+  - gertrudes
+  - mp shah
+  - kemsa
+  - laboratory
+  - mama lucy
+  - avenue hospital
+  - coptic hospital
+  - medanta afri
+  - nairobi womens hospital
+  education:
+  - school
+  - university
+  - college
+  - course
+  - tuition
+  - workshop
+  - seminar
+  - training
+  - lesson
+  - books
+  - study
+  - knec
+  - kcse
+  - kcpe
+  - helb
+  - kuccps
+  - tsc
+  - strathmore
+  - ku
+  - uon
+  - jkuat
+  - kemu
+  - kcau
+  - daystar
+  - usiu
+  - riara
+  - kenya methodist
+  travel:
+  - hotel
+  - flight
+  - airline
+  - booking
+  - vacation
+  - tour
+  - cruise
+  - ticket
+  - resort
+  - motel
+  - hostel
+  - trip
+  - bonfire
+  - airbnb
+  - trivago
+  - booking.com
+  - magical kenya
+  - kws
+  - masai mara
+  - diani
+  - watamu
+  - giraffe centre
+  - maasai market
+  - safari park
+  - aberdares
+  - tsavo
+  personal_care:
+  - salon
+  - spa
+  - barber
+  - nails
+  - beauty
+  - massage
+  - cosmetics
+  - skincare
+  - kinyozi
+  - suzie beauty
+  - lintons
+  - ashley
+  - kazuri
+  - marini naturals
+  - dorothy's salon
+  - amina's beauty parlor
+  - alchemia spa
+  finance:
+  - bank
+  - loan
+  - mortgage
+  - pesa
+  - investment
+  - insurance
+  - credit
+  - fee
+  - atm
+  - withdrawal
+  - deposit
+  - mpesa
+  - pesaPal
+  - equity
+  - kcb
+  - coop
+  - dtb
+  - ncba
+  - cba
+  - stanchart
+  - absa
+  - sacco
+  - mshwari
+  - fuliza
+  - family bank
+  - nic bank
+  - chase bank
+  - national bank
+  - credit union
+  - central bank of kenya
+  - loop
+  home:
+  - rent
+  - mortgage
+  - furniture
+  - appliance
+  - cleaning
+  - gardening
+  - repair
+  - maintenance
+  - decor
+  - plot
+  - victoria courts
+  - mabati
+  - harambee sacco
+  - kuscco
+  - nssf
+  - beth international
+  - silverline realty
+  - greecha
+  gifts:
+  - gift
+  - charity
+  - donation
+  - present
+  - fundraiser
+  - church
+  - ngo
+  - nonprofit
+  - harambee
+  - red cross
+  - unicef
+  - amref
+  - kenya community development foundation
+  - kenyatta trust
+  - watoto foundation
+  - safaricom foundation
+  - equity group foundation
+  fitness:
+  - gym
+  - yoga
+  - workout
+  - fitness
+  - sports
+  - trainer
+  - exercise
+  - equipment
+  - membership
+  - reform gym
+  - power gym
+  - anytime fitness
+  - safari gym
+  - gym & tonic
+  - fitness studio
+  - running
+  - aerobics
+  pets:
+  - pet
+  - vet
+  - animal
+  - grooming
+  - kennel
+  - boarding
+  - supplies
+  - dog food
+  - cat food
+  - kspca
+  - paw print
+  - kusa
+  - vet care kenya
+  - pet zone
+  - happy paws
+  - pet corner
+  taxes:
+  - tax
+  - kra
+  - property tax
+  - income tax
+  - sales tax
+  - vat
+  - refund
+  - itax
+  - pin
+  - customs
+  - excise duty
+  - capital gains tax
+  - withholding tax
+  business_services:
+  - office supplies
+  - printing
+  - shipping
+  - consulting
+  - legal
+  - accounting
+  - marketing
+  - advertising
+  - cybercafe
+  - mpesa agent
+  - safaricom shop
+  - p.o. box
+  - kenya post
+  - parastatal
+  government_services:
+  - passport
+  - id
+  - license
+  - permit
+  - certificate
+  - huduma centre
+  - e-citizen
+  - ntsa
+  - immigration
+  - lands
+  - registrar
+  - birth certificate
+  - kenya gazette
+  - city council
+  agriculture:
+  - seeds
+  - fertilizer
+  - farm equipment
+  - livestock
+  - irrigation
+  - agrovet
+  - ncpb
+  - kalro
+  - kephis
+  - farm
+  - cattle
+  - poultry
+  - dairy
+
+

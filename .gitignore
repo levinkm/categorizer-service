@@ -12,3 +12,4 @@
 **/.vscode
 **/*.*proj.user
 **/logs
+**/*.log

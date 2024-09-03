@@ -69,7 +69,6 @@ class TransactionService:
         return transactions
     
     def get_transactions_last_24hrs_with_category(self, limit: int = 1000):
-    # Get the current time and the time 24 hours ago
         now = datetime.now()
         last_24hrs = now - timedelta(hours=24)
         

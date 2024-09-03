@@ -3,7 +3,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 
 from src.transaction_categorization.categorize import EnhancedTransactionCategorizationService
-from src.transaction_categorization.data_loader import load_training_data,load_update_data
+from src.transaction_categorization.data_loader import load_update_data
 from src.utils.config_utils import config
 from src.utils.logging_utils import setup_logger
 from src.database.db_utils import get_transaction_service
@@ -12,23 +12,18 @@ logger = setup_logger(__name__)
 
 
 
-def daily_training(config):
+def daily_model_update(config):
     print(f"Starting daily training at {datetime.now()}")
-    
-    # Initialize the service
+   
     service = EnhancedTransactionCategorizationService(model_path=config['model']['path'])
     
-    # Load new data
-    new_data = load_training_data(get_transaction_service())
-    
-    # Update the model with new data
+    new_data = load_update_data(get_transaction_service())
+
     service.update_model(new_data)
     
     print(f"Daily training completed at {datetime.now()}")
 
 def main():
-
-    # Check if model exists, if not, train it
     
     service = EnhancedTransactionCategorizationService(model_path=config['model']['path'])
 
@@ -41,7 +36,7 @@ def main():
     
     # Schedule the job to run at the specified time every day
     start_time = datetime.strptime(config['scheduler']['start_time'], "%H:%M").time()
-    scheduler.add_job(daily_training, 'interval', 
+    scheduler.add_job(daily_model_update, 'interval', 
                       hours=config['scheduler']['update_interval_hours'], 
                       start_date=datetime.combine(datetime.now().date(), start_time),
                       args=[config])

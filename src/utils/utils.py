@@ -42,6 +42,24 @@ class RedisQueue:
             decode_responses=True
         )
         self.queue_name = queue_name
+    
+    def get(self,var):
+        return self.redis_client.get(var)
+    
+    def set(self, var, value):
+        return self.redis_client.set(var, value)
+    
+    def setex(self, name, time, value):
+        return self.redis_client.setex(name, time, value)
+    
+    def delete(self, var):
+        return self.redis_client.delete(var)
+    
+    def get_queue_name(self):
+        return self.queue_name
+    
+    def set_queue_name(self, queue_name):
+        self.queue_name = queue_name
 
     def enqueue(self, item):
         """Add an item to the queue."""
@@ -67,6 +85,7 @@ class RedisQueue:
             logger.info(f"Found and dequeued {len(results)} item(s) from the queue.")
             for item in results:
                 try:
+                    logger.info(f"Found and dequeued {json.loads(item)}")
                     yield json.loads(item)
                 except json.JSONDecodeError as e:
                     logger.error(f"JSON parsing error for item: {item[:100]}... Error: {str(e)}")

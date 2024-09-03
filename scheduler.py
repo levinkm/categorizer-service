@@ -1,21 +1,16 @@
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
-import pandas as pd
-import os
 
 from src.transaction_categorization.categorize import EnhancedTransactionCategorizationService
+from src.transaction_categorization.data_loader import load_training_data,load_update_data
 from src.utils.config_utils import config
-from src.utils.logging_utils import setup_logging
+from src.utils.logging_utils import setup_logger
+from src.database.db_utils import get_transaction_service
 
-logger = setup_logging(__name__)
+logger = setup_logger(__name__)
 
-def load_new_data(config):
-    # This is a placeholder. Replace with actual data loading logic
-    if config['data_source']['type'] == 'csv':
-        return pd.read_csv(config['data_source']['path'])
-    else:
-        raise ValueError(f"Unsupported data source type: {config['data_source']['type']}")
+
 
 def daily_training(config):
     print(f"Starting daily training at {datetime.now()}")
@@ -24,7 +19,7 @@ def daily_training(config):
     service = EnhancedTransactionCategorizationService(model_path=config['model']['path'])
     
     # Load new data
-    new_data = load_new_data(config)
+    new_data = load_training_data(get_transaction_service())
     
     # Update the model with new data
     service.update_model(new_data)
@@ -34,14 +29,13 @@ def daily_training(config):
 def main():
 
     # Check if model exists, if not, train it
-    if not os.path.exists(config['model']['path']):
-        logger.warning("Model not found. Training a new model...")
-        service = EnhancedTransactionCategorizationService(model_path=config['model']['path'])
+    
+    service = EnhancedTransactionCategorizationService(model_path=config['model']['path'])
 
-        # Load initial training data and train the model
-        initial_data = load_new_data(config)
-        service.update_model(initial_data)
-        logger.info("Initial model training completed.")
+    # Load initial training data and train the model
+    initial_data = load_update_data(get_transaction_service())
+    service.update_model(initial_data)
+    logger.info("Initial model training completed.")
 
     scheduler = BackgroundScheduler()
     

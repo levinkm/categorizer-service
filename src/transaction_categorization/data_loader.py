@@ -41,3 +41,39 @@ def load_training_data(transactionDB: TransactionService) -> pd.DataFrame:
     except Exception as e:
         logger.error(f"Error loading training data: {str(e)}")
         raise
+
+def load_update_data(transactionDB: TransactionService) -> pd.DataFrame:
+    """Load training data for the model from the transaction database."""
+    try:
+        transactions: List[Transaction] = transactionDB.get_transactions_last_24hrs_with_category(2000)
+   
+        # Convert transactions to DataFrame
+        df = pd.DataFrame([
+            {
+                'transaction_id': t.id,
+                'type': t.type,
+                'amount': t.amount,
+                'narration': t.narration,
+                'date': t.date,
+                'category_id': t.category_id,
+                'subcategory_id': t.subcategory_id,
+                'currency': t.currency
+            } for t in transactions
+        ])
+        
+        # Log the columns of the DataFrame for debugging
+        logger.info(f"DataFrame columns: {df.columns}")
+        logger.info(f"First few rows of DataFrame: {df.head()}")
+
+        # Ensure 'date' is in datetime format
+        if 'date' in df.columns:
+            if df['date'].dtype != 'datetime64[ns]':
+                df['date'] = pd.to_datetime(df['date'])
+        else:
+            logger.error("'date' column is missing from the DataFrame.")
+           
+    
+        return df
+    except Exception as e:
+        logger.error(f"Error loading training data: {str(e)}")
+        raise

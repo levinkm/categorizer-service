@@ -21,7 +21,7 @@ class Transaction(Base):
     charges = Column(Integer, nullable=False, default=0)
     currency = Column(VARCHAR(5), nullable=False)
     created_at = Column(DateTime, default=func.now(), nullable=False)
-    updated_at = Column(DateTime, default=func.now(), onupdate=func.now(), nullable=False)
+    updated_at = Column(DateTime, default=func.now(),server_default=func.now(), server_onupdate=func.now(), nullable=False)
 
     category = relationship("Category", back_populates="transactions", lazy="joined")
 

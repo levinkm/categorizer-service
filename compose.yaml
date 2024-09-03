@@ -11,19 +11,21 @@ services:
   server:
     build:
       context: .
-    ports:
-      - 9000:9000
-
     restart: always
-
+    volumes:
+      - model_volume:/app/models
+      - app_logs:/app/logs
     networks:
       - fedha_network
+
+volumes:
+  model_volume:
+  app_logs:
 
 networks:
   fedha_network:
     name: fedha_network
     external: true
-      
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to

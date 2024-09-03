@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -11,6 +12,9 @@ import logging
 from src.database.db_utils import TransactionService
 from src.transaction_categorization.text_utils import text_processor
 from src.transaction_categorization.data_loader import load_training_data
+from src.utils.config_utils import config
+
+model_config = config['model']
 
 def load_or_train_model(model_path: str, logger: logging.Logger, transactionDB: TransactionService) -> Pipeline:
     """Load the existing model or train a new one if not found."""
@@ -34,7 +38,7 @@ def train_model(model_path: str, logger: logging.Logger, transactionDB: Transact
         X = data[['narration', 'amount']]  # Keep it as a DataFrame
         y = data['category_id']  # Assuming 'category_id' is the target variable
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=model_config["test_size"], random_state=model_config["random_state"])
         logger.info(f"X_train shape: {X_train.shape}")
         logger.info(f"y_train shape: {y_train.shape}")
 
@@ -60,7 +64,9 @@ def train_model(model_path: str, logger: logging.Logger, transactionDB: Transact
         evaluate_model(model, X_test, y_test, logger)
 
         # Save the model
+        os.makedirs(os.path.dirname(model_path), exist_ok=True)
         joblib.dump(model, model_path)
+        joblib.dump(data, model_config["training_data_path"])
         logger.info(f"Model saved to {model_path}")
         return model
 
@@ -79,20 +85,32 @@ def evaluate_model(model: Pipeline, X_test: pd.DataFrame, y_test: pd.Series, log
         raise
 
 def update_model(model: Pipeline, new_data: pd.DataFrame, model_path: str, logger: logging.Logger) -> Pipeline:
-    """Update the model with new training data."""
+    """Update the model with new training data and evaluate its performance."""
     try:
         logger.info(f"Updating model with new data: {len(new_data)} records")
-    
-        existing_data = joblib.load('training_data.joblib')
+
+        try:
+            existing_data = joblib.load('training_data.joblib')
+            logger.info("Existing training data loaded.")
+        except (FileNotFoundError, EOFError):
+            logger.warning("No existing training data found. Starting fresh.")
+            existing_data = pd.DataFrame()
+
         updated_data = pd.concat([existing_data, new_data], ignore_index=True)
-    
+
         X = updated_data[['narration', 'amount']]
-        y = updated_data['category_id']  # Assuming 'category_id' is the target variable
-        model.fit(X, y)
-    
+        y = updated_data['category_id']  
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=model_config["test_size"], random_state=model_config["random_state"])
+        
+        model.fit(X_train, y_train)
+
+        evaluate_model(model, X_test, y_test, logger)
+        os.makedirs(os.path.dirname(model_path), exist_ok=True)
         joblib.dump(model, model_path)
-        joblib.dump(updated_data, 'training_data.joblib')
-        logger.info("Model updated and saved")
+        joblib.dump(updated_data, model_config["training_data_path"])
+        logger.info("Model and training data updated, evaluated, and saved.")
+        
         return model
     except Exception as e:
         logger.error(f"Error updating model: {str(e)}")
